@@ -1,7 +1,7 @@
 #define _DEBUG_
 
 #include <math.h>
-
+// pin of moters
 #define MOT_L_IN1 3
 #define MOT_L_IN2 5
 #define MOT_R_IN3 6
@@ -9,7 +9,7 @@
 #define En_1 8
 #define En_2 9
 
-
+// pin of lsa08
 #define JP 10
 #define LED 13
 
@@ -24,7 +24,7 @@ void setup() {
   pinMode(MOT_L_IN1,OUTPUT);
   pinMode(MOT_L_IN2,OUTPUT);
   pinMode(MOT_R_IN3,OUTPUT);
-   pinMode(MOT_R_IN4,OUTPUT);
+  pinMode(MOT_R_IN4,OUTPUT);
   pinMode(En_1 ,OUTPUT);
   pinMode(En_2 ,OUTPUT);
   pinMode(LED ,OUTPUT);
@@ -37,7 +37,7 @@ void loop()
 {  
   digitalWrite(En_1, HIGH);
   digitalWrite(En_2, HIGH);
- 
+   
 if(Serial3.available())
  {
    sensor = Serial3.read();
